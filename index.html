@@ -43,5 +43,30 @@
     </footer>
 
     <script src="script.js"></script>
+
+<section id="formulario" style="text-align: center; padding: 2rem;">
+  <h2>🎤 ¡Solicita tu canción personalizada!</h2>
+  <p>Responde con estos datos y te contactaremos vía WhatsApp:</p>
+  <form onsubmit="enviarWhatsApp(event)" style="display: inline-block; text-align: left;">
+    <label>Nombre o apodo:<br><input type="text" id="nombre" required></label><br><br>
+    <label>Estilo musical:<br><input type="text" id="estilo" required></label><br><br>
+    <label>Ocasión (cumpleaños, marca, regalo, etc.):<br><input type="text" id="ocasion" required></label><br><br>
+    <button type="submit">Enviar por WhatsApp</button>
+  </form>
+</section>
+<script>
+  function enviarWhatsApp(event) {
+    event.preventDefault();
+    const nombre = document.getElementById('nombre').value;
+    const estilo = document.getElementById('estilo').value;
+    const ocasion = document.getElementById('ocasion').value;
+    const numero = '52XXXXXXXXX9'; // reemplazar con número real
+
+    const mensaje = `Hola! Me gustaría una canción personalizada.\nMi nombre/apodo: ${nombre}\nEstilo musical: ${estilo}\nOcasión: ${ocasion}`;
+    const url = `https://wa.me/${numero}?text=` + encodeURIComponent(mensaje);
+    window.open(url, '_blank');
+  }
+</script>
+
 </body>
 </html>
