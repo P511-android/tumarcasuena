@@ -44,29 +44,39 @@
 
     <script src="script.js"></script>
 
-<section id="formulario" style="text-align: center; padding: 2rem;">
-  <h2>🎤 ¡Solicita tu canción personalizada!</h2>
-  <p>Responde con estos datos y te contactaremos vía WhatsApp:</p>
-  <form onsubmit="enviarWhatsApp(event)" style="display: inline-block; text-align: left;">
-    <label>Nombre o apodo:<br><input type="text" id="nombre" required></label><br><br>
-    <label>Estilo musical:<br><input type="text" id="estilo" required></label><br><br>
-    <label>Ocasión (cumpleaños, marca, regalo, etc.):<br><input type="text" id="ocasion" required></label><br><br>
-    <button type="submit">Enviar por WhatsApp</button>
-  </form>
-</section>
-<script>
-  function enviarWhatsApp(event) {
-    event.preventDefault();
-    const nombre = document.getElementById('nombre').value;
-    const estilo = document.getElementById('estilo').value;
-    const ocasion = document.getElementById('ocasion').value;
-    const numero = '52XXXXXXXXX9'; // reemplazar con número real
+<section class="testimonios">
+  <h2>💬 Lo que dicen nuestros clientes</h2>
 
-    const mensaje = `Hola! Me gustaría una canción personalizada.\nMi nombre/apodo: ${nombre}\nEstilo musical: ${estilo}\nOcasión: ${ocasion}`;
-    const url = `https://wa.me/${numero}?text=` + encodeURIComponent(mensaje);
-    window.open(url, '_blank');
-  }
-</script>
+  <div class="testimonio">
+    <p>“Encargamos una canción para nuestra joyería y fue un éxito total. La clientela la canta, se quedó en sus cabezas. ¡Gracias infinitas!”</p>
+    <span>– Joyería Quetzalli, GDL</span>
+  </div>
+
+  <div class="testimonio">
+    <p>“Me hicieron una rola pa' mi barbería. El beat callejero y la letra motivacional... ¡machín! Ahora todos la escuchan mientras se cortan el pelo.”</p>
+    <span>– BarberShop 23, León</span>
+  </div>
+
+  <div class="testimonio">
+    <p>“Les pedí una canción para pedirle matrimonio a mi novia... ¡y lloró de emoción! Fue perfecta, como si me hubieran leído el alma.”</p>
+    <span>– Alejandro G., CDMX</span>
+  </div>
+
+  <div class="testimonio">
+    <p>“Pedí una canción para el Día de las Madres. Mi mamá no paraba de llorar. Dicen que el amor no se compra... pero esta canción lo dijo todo.”</p>
+    <span>– Fabiola R., Michoacán</span>
+  </div>
+
+  <div class="testimonio">
+    <p>“Soy entrenador y pedí una rola para motivar a mis alumnos. ¡La usan en cada rutina! Tiene fuego, tiene letra, tiene alma.”</p>
+    <span>– Coach Omar, Monterrey</span>
+  </div>
+
+  <div class="testimonio">
+    <p>“Mi abuelito falleció y les pedí una canción homenaje. Cuando la tocamos en la despedida… nadie pudo contener las lágrimas. Gracias de corazón.”</p>
+    <span>– Mariana T., Zacatecas</span>
+  </div>
+</section>
 
 </body>
 </html>
