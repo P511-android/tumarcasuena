@@ -2,57 +2,46 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Tu Marca Suena</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #111; color: #fff; }
-        header { background: #222; padding: 1rem; text-align: center; }
-        h1 { font-size: 2rem; margin: 0; }
-        .hero { padding: 2rem; text-align: center; }
-        .hero p { font-size: 1.2rem; }
-        .btn { background: #28a745; color: white; padding: 1rem; text-decoration: none; border-radius: 5px; }
-        .section { padding: 2rem; background: #1e1e1e; margin: 1rem 0; border-radius: 8px; }
-        .form-section input, .form-section select, .form-section textarea { width: 100%; padding: 0.8rem; margin: 0.5rem 0; border-radius: 5px; border: none; }
-        .form-section button { padding: 1rem; background: #007bff; color: white; border: none; border-radius: 5px; }
-        footer { text-align: center; padding: 1rem; font-size: 0.8rem; background: #222; }
-    </style>
+    <title>Tu Marca Suena</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <header>
+        <h1>🎵 Tu Marca Suena</h1>
+        <p>Creación de jingles personalizados para negocios, marcas, campañas y ocasiones especiales.</p>
+        <p>¡Emociona, conecta y destaca tu esencia sonora!</p>
+        <a href="https://wa.me/52XXXXXXXXXX" target="_blank" class="whatsapp-button">📱 Contáctanos por WhatsApp</a>
+    </header>
 
-<header>
-    <h1>🎵 Tu Marca Suena</h1>
-</header>
+    <main>
+        <section class="form-section">
+            <h2>Solicita tu Canción Personalizada</h2>
+            <form id="jingleForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
 
-<section class="hero">
-    <h2>Canciones personalizadas para tu negocio o evento</h2>
-    <p>¿Te gustaría tener una canción única para tu boda, tu negocio, tu pareja o tu historia? ¡Nosotros la hacemos realidad!</p>
-    <a href="https://wa.me/523345650719" class="btn">Contáctanos por WhatsApp</a>
-</section>
+                <label for="apodo">Apodo o nombre artístico:</label>
+                <input type="text" id="apodo">
 
-<section class="section">
-    <h3>🎁 ¿Qué incluye?</h3>
-    <ul>
-        <li>Letra personalizada con tu historia</li>
-        <li>Estilo musical a tu elección</li>
-        <li>Entrega en audio listo para compartir</li>
-        <li>Opcional: videoclip o portada visual</li>
-    </ul>
-</section>
+                <label for="evento">¿Para qué ocasión es? (Boda, Cumpleaños, Día del Padre, etc):</label>
+                <input type="text" id="evento" required>
 
-<section class="section form-section">
-    <h3>📝 Llena esta encuesta</h3>
-    <form action="https://wa.me/523345650719" method="get" target="_blank">
-        <input type="text" name="name" placeholder="Tu nombre o apodo" required>
-        <input type="text" name="event" placeholder="¿Para qué ocasión es la canción? (boda, negocio, etc.)" required>
-        <input type="text" name="style" placeholder="¿Qué estilo musical prefieres? (rap, regional, romántico...)" required>
-        <textarea name="message" placeholder="Cuéntanos algo que quieras que incluyamos en la canción..."></textarea>
-        <button type="submit">Enviar por WhatsApp</button>
-    </form>
-</section>
+                <label for="estilo">Estilo musical preferido:</label>
+                <input type="text" id="estilo" required>
 
-<footer>
-    Tu Marca Suena · Todos los derechos reservados · 2025
-</footer>
+                <label for="mensaje">Mensaje o frases clave:</label>
+                <textarea id="mensaje" rows="4" required></textarea>
 
+                <button type="submit">Enviar por WhatsApp</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Tu Marca Suena. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
