@@ -1,53 +1,82 @@
-
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tu Marca Suena</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/png" href="logo.png" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tu Marca Suena</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="logo.png" alt="Tu Marca Suena Logo" class="logo"/>
-    <h1>Solicita tu Canción Personalizada</h1>
-  </header>
+    <header>
+        <h1>🎵 Tu Marca Suena</h1>
+        <p>Creación de jingles personalizados para negocios, marcas, campañas y ocasiones especiales.</p>
+        <p>¡Emociona, conecta y destaca tu esencia sonora!</p>
+        <a href="https://wa.me/52XXXXXXXXXX" target="_blank" class="whatsapp-button">📱 Contáctanos por WhatsApp</a>
+    </header>
 
-  <main>
-    <form>
-      <label for="nombre">Nombre:</label>
-      <input type="text" id="nombre" required />
-      <label for="apodo">Apodo o nombre artístico:</label>
-      <input type="text" id="apodo" required />
-      <label for="ocasion">¿Para qué ocasión es? (Boda, Cumpleaños, Día del Padre, etc):</label>
-      <input type="text" id="ocasion" required />
-      <label for="estilo">Estilo musical:</label>
-      <input type="text" id="estilo" required />
-      <button type="button" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
-    </form>
+    <main>
+        <section class="form-section">
+            <h2>Solicita tu Canción Personalizada</h2>
+            <form id="jingleForm">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" required>
 
-    <section class="testimonios">
-      <h2>💬 Lo que dicen nuestros clientes</h2>
-      <div class="testimonio-slider">
-        <blockquote>“Encargamos una canción para nuestra joyería y fue un éxito total. La clientela la canta, se quedó en sus cabezas. ¡Gracias infinitas!” — Joyería Quetzalli, GDL</blockquote>
-        <blockquote>“La rola que nos hicieron sonó en el evento como himno. Nadie lo esperaba, todos lloraron. Eternamente agradecida.” — Karla M., CDMX</blockquote>
-        <blockquote>“Mis alumnos aman su canción motivacional. ¡Me siento orgulloso de compartirla cada lunes!” — Profe Jesús, Michoacán</blockquote>
-        <blockquote>“Nos hicieron un corrido empresarial con el nombre de mi marca y fue el mejor regalo para mi equipo.” — Miguel R., Monterrey</blockquote>
-        <blockquote>“Convirtieron mi historia en canción. Lo compartí en redes y se viralizó. ¡Tu Marca Suena sí suena!” — Estrella A., Guadalajara</blockquote>
-      </div>
-    </section>
-  </main>
+                <label for="apodo">Apodo o nombre artístico:</label>
+                <input type="text" id="apodo">
 
-  <footer>
-    <p>© 2025 Tu Marca Suena. Todos los derechos reservados.</p>
-  </footer>
+                <label for="evento">¿Para qué ocasión es? (Boda, Cumpleaños, Día del Padre, etc):</label>
+                <input type="text" id="evento" required>
 
-  <a href="#" id="whatsapp-float" onclick="enviarWhatsApp()">
-    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/>
-  </a>
+                <label for="estilo">Estilo musical preferido:</label>
+                <input type="text" id="estilo" required>
 
-  <script src="script.js"></script>
+                <label for="mensaje">Mensaje o frases clave:</label>
+                <textarea id="mensaje" rows="4" required></textarea>
+
+                <button type="submit">Enviar por WhatsApp</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Tu Marca Suena. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+<section class="testimonios">
+  <h2>💬 Lo que dicen nuestros clientes</h2>
+
+  <div class="testimonio">
+    <p>“Encargamos una canción para nuestra joyería y fue un éxito total. La clientela la canta, se quedó en sus cabezas. ¡Gracias infinitas!”</p>
+    <span>– Joyería Quetzalli, GDL</span>
+  </div>
+
+  <div class="testimonio">
+    <p>“Me hicieron una rola pa' mi barbería. El beat callejero y la letra motivacional... ¡machín! Ahora todos la escuchan mientras se cortan el pelo.”</p>
+    <span>– BarberShop 23, León</span>
+  </div>
+
+  <div class="testimonio">
+    <p>“Les pedí una canción para pedirle matrimonio a mi novia... ¡y lloró de emoción! Fue perfecta, como si me hubieran leído el alma.”</p>
+    <span>– Alejandro G., CDMX</span>
+  </div>
+
+  <div class="testimonio">
+    <p>“Pedí una canción para el Día de las Madres. Mi mamá no paraba de llorar. Dicen que el amor no se compra... pero esta canción lo dijo todo.”</p>
+    <span>– Fabiola R., Michoacán</span>
+  </div>
+
+  <div class="testimonio">
+    <p>“Soy entrenador y pedí una rola para motivar a mis alumnos. ¡La usan en cada rutina! Tiene fuego, tiene letra, tiene alma.”</p>
+    <span>– Coach Omar, Monterrey</span>
+  </div>
+
+  <div class="testimonio">
+    <p>“Mi abuelito falleció y les pedí una canción homenaje. Cuando la tocamos en la despedida… nadie pudo contener las lágrimas. Gracias de corazón.”</p>
+    <span>– Mariana T., Zacatecas</span>
+  </div>
+</section>
+
 </body>
 </html>
