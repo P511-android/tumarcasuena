@@ -1,37 +1,53 @@
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Tu Marca Suena</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tu Marca Suena</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" type="image/png" href="logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
 </head>
 <body>
+  <header>
+    <img src="logo.png" alt="Tu Marca Suena Logo" class="logo"/>
     <h1>Solicita tu Canción Personalizada</h1>
+  </header>
+
+  <main>
     <form>
-        <label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" required><br><br>
-
-        <label for="apodo">Apodo o nombre artístico:</label>
-        <input type="text" id="apodo" required><br><br>
-
-        <label for="ocasion">¿Para qué ocasión es? (Boda, Cumpleaños, Día del Padre, etc):</label>
-        <input type="text" id="ocasion" required><br><br>
-
-        <label for="estilo">Estilo musical:</label>
-        <input type="text" id="estilo" required><br><br>
-
-        <button type="button" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" required />
+      <label for="apodo">Apodo o nombre artístico:</label>
+      <input type="text" id="apodo" required />
+      <label for="ocasion">¿Para qué ocasión es? (Boda, Cumpleaños, Día del Padre, etc):</label>
+      <input type="text" id="ocasion" required />
+      <label for="estilo">Estilo musical:</label>
+      <input type="text" id="estilo" required />
+      <button type="button" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
     </form>
 
-    <footer>
-        <p>© 2025 Tu Marca Suena. Todos los derechos reservados.</p>
-        <h3>💬 Lo que dicen nuestros clientes</h3>
-        <blockquote>
-            “Encargamos una canción para nuestra joyería y fue un éxito total. La clientela la canta, se quedó en sus cabezas. ¡Gracias infinitas!”
-            <br>— Joyería Quetzalli, GDL
-        </blockquote>
-    </footer>
+    <section class="testimonios">
+      <h2>💬 Lo que dicen nuestros clientes</h2>
+      <div class="testimonio-slider">
+        <blockquote>“Encargamos una canción para nuestra joyería y fue un éxito total. La clientela la canta, se quedó en sus cabezas. ¡Gracias infinitas!” — Joyería Quetzalli, GDL</blockquote>
+        <blockquote>“La rola que nos hicieron sonó en el evento como himno. Nadie lo esperaba, todos lloraron. Eternamente agradecida.” — Karla M., CDMX</blockquote>
+        <blockquote>“Mis alumnos aman su canción motivacional. ¡Me siento orgulloso de compartirla cada lunes!” — Profe Jesús, Michoacán</blockquote>
+        <blockquote>“Nos hicieron un corrido empresarial con el nombre de mi marca y fue el mejor regalo para mi equipo.” — Miguel R., Monterrey</blockquote>
+        <blockquote>“Convirtieron mi historia en canción. Lo compartí en redes y se viralizó. ¡Tu Marca Suena sí suena!” — Estrella A., Guadalajara</blockquote>
+      </div>
+    </section>
+  </main>
 
-    <script src="script.js"></script>
+  <footer>
+    <p>© 2025 Tu Marca Suena. Todos los derechos reservados.</p>
+  </footer>
+
+  <a href="#" id="whatsapp-float" onclick="enviarWhatsApp()">
+    <img src="https://img.icons8.com/color/48/000000/whatsapp--v1.png"/>
+  </a>
+
+  <script src="script.js"></script>
 </body>
 </html>
