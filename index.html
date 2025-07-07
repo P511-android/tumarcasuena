@@ -1,10 +1,37 @@
-function enviarWhatsApp() {
-    const nombre = document.getElementById("nombre").value;
-    const apodo = document.getElementById("apodo").value;
-    const ocasion = document.getElementById("ocasion").value;
-    const estilo = document.getElementById("estilo").value;
-    const mensaje = `¡Hola! 🎶 Me interesa una canción personalizada. Mis datos son:\n\n👤 Nombre: ${nombre}\n🎤 Apodo/Artístico: ${apodo}\n🎁 Ocasión: ${ocasion}\n🎼 Estilo musical: ${estilo}`;
-    const telefono = "5213345650719";
-    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
-    window.open(url, "_blank");
-}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Tu Marca Suena</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Solicita tu Canción Personalizada</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" required><br><br>
+
+        <label for="apodo">Apodo o nombre artístico:</label>
+        <input type="text" id="apodo" required><br><br>
+
+        <label for="ocasion">¿Para qué ocasión es? (Boda, Cumpleaños, Día del Padre, etc):</label>
+        <input type="text" id="ocasion" required><br><br>
+
+        <label for="estilo">Estilo musical:</label>
+        <input type="text" id="estilo" required><br><br>
+
+        <button type="button" onclick="enviarWhatsApp()">Enviar por WhatsApp</button>
+    </form>
+
+    <footer>
+        <p>© 2025 Tu Marca Suena. Todos los derechos reservados.</p>
+        <h3>💬 Lo que dicen nuestros clientes</h3>
+        <blockquote>
+            “Encargamos una canción para nuestra joyería y fue un éxito total. La clientela la canta, se quedó en sus cabezas. ¡Gracias infinitas!”
+            <br>— Joyería Quetzalli, GDL
+        </blockquote>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
