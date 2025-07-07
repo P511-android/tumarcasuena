@@ -1,82 +1,10 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Marca Suena</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <h1>🎵 Tu Marca Suena</h1>
-        <p>Creación de jingles personalizados para negocios, marcas, campañas y ocasiones especiales.</p>
-        <p>¡Emociona, conecta y destaca tu esencia sonora!</p>
-        <a href="https://wa.me/52XXXXXXXXXX" target="_blank" class="whatsapp-button">📱 Contáctanos por WhatsApp</a>
-    </header>
-
-    <main>
-        <section class="form-section">
-            <h2>Solicita tu Canción Personalizada</h2>
-            <form id="jingleForm">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" required>
-
-                <label for="apodo">Apodo o nombre artístico:</label>
-                <input type="text" id="apodo">
-
-                <label for="evento">¿Para qué ocasión es? (Boda, Cumpleaños, Día del Padre, etc):</label>
-                <input type="text" id="evento" required>
-
-                <label for="estilo">Estilo musical preferido:</label>
-                <input type="text" id="estilo" required>
-
-                <label for="mensaje">Mensaje o frases clave:</label>
-                <textarea id="mensaje" rows="4" required></textarea>
-
-                <button type="submit">Enviar por WhatsApp</button>
-            </form>
-        </section>
-    </main>
-
-    <footer>
-        <p>© 2025 Tu Marca Suena. Todos los derechos reservados.</p>
-    </footer>
-
-    <script src="script.js"></script>
-
-<section class="testimonios">
-  <h2>💬 Lo que dicen nuestros clientes</h2>
-
-  <div class="testimonio">
-    <p>“Encargamos una canción para nuestra joyería y fue un éxito total. La clientela la canta, se quedó en sus cabezas. ¡Gracias infinitas!”</p>
-    <span>– Joyería Quetzalli, GDL</span>
-  </div>
-
-  <div class="testimonio">
-    <p>“Me hicieron una rola pa' mi barbería. El beat callejero y la letra motivacional... ¡machín! Ahora todos la escuchan mientras se cortan el pelo.”</p>
-    <span>– BarberShop 23, León</span>
-  </div>
-
-  <div class="testimonio">
-    <p>“Les pedí una canción para pedirle matrimonio a mi novia... ¡y lloró de emoción! Fue perfecta, como si me hubieran leído el alma.”</p>
-    <span>– Alejandro G., CDMX</span>
-  </div>
-
-  <div class="testimonio">
-    <p>“Pedí una canción para el Día de las Madres. Mi mamá no paraba de llorar. Dicen que el amor no se compra... pero esta canción lo dijo todo.”</p>
-    <span>– Fabiola R., Michoacán</span>
-  </div>
-
-  <div class="testimonio">
-    <p>“Soy entrenador y pedí una rola para motivar a mis alumnos. ¡La usan en cada rutina! Tiene fuego, tiene letra, tiene alma.”</p>
-    <span>– Coach Omar, Monterrey</span>
-  </div>
-
-  <div class="testimonio">
-    <p>“Mi abuelito falleció y les pedí una canción homenaje. Cuando la tocamos en la despedida… nadie pudo contener las lágrimas. Gracias de corazón.”</p>
-    <span>– Mariana T., Zacatecas</span>
-  </div>
-</section>
-
-</body>
-</html>
+function enviarWhatsApp() {
+    const nombre = document.getElementById("nombre").value;
+    const apodo = document.getElementById("apodo").value;
+    const ocasion = document.getElementById("ocasion").value;
+    const estilo = document.getElementById("estilo").value;
+    const mensaje = `¡Hola! 🎶 Me interesa una canción personalizada. Mis datos son:\n\n👤 Nombre: ${nombre}\n🎤 Apodo/Artístico: ${apodo}\n🎁 Ocasión: ${ocasion}\n🎼 Estilo musical: ${estilo}`;
+    const telefono = "5213345650719";
+    const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, "_blank");
+}
